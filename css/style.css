@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 100vw;
+    background: url("../img/fondo_test.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+nav{
+    width: 100%;
+    text-align: end;
+    padding: 15px;
+}
+
+nav span{
+    margin-right: 10px;
+}
+
+header{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .content_main{
+    width: 500px;
+    height: 250px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+main .content_main .detalles_test{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+main .content_main .boton{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.btn{
+    cursor: pointer;
+    font-size: medium;
+    padding: 8px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    margin: 10px;
+}
+
+.btn:hover{
+    background: green;
+    color: greenyellow;
+}
+
+.max-intentos{
+    font-size: larger;
+    font-weight: bold;
+    color: crimson;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    background: rgba(255, 255, 255, .3);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, .5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .37);
+}
+
+footer .content_footer{
+    display: flex;
+    align-items: center;
+}
+
+footer .content_footer .img_marca img{
+    width: 60px;
+}
+
+footer .content_footer .derechos{
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+    font-weight: bolder;
+}
