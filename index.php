@@ -1,4 +1,4 @@
-ç<?php
+<?php
 
 require_once 'conection_db/conexion.php';
 include_once 'logica/funciones_login.php';
