@@ -148,3 +148,22 @@ function validarEmail($valor)
     //Validamos la dirección de correo
     return filter_var($valor, FILTER_VALIDATE_EMAIL);
 }
+
+/**
+ * Función con la que alteramos el password introducido por el usuario, aumentando la seguridad
+ * en el caso de que el algoritmo de cifrado sea expuesto.
+ */
+function ofuscarPassword($pass){
+    $resultado = [];
+    $array_1 = str_split($pass); //Creamos un array con los caracteres del password
+    $array_2 = array_reverse($array_1, false); //array invertido del anterior
+
+    //Recorremos el array y guardamos las posiciones de los array por orden en un nuevo array
+    for($i = 0; $i < sizeof($array_1); $i++){
+        array_push($resultado, $array_1[$i]);
+        array_push($resultado, $array_2[$i]);
+    }
+
+    // Devolvemos el nuevo password en forma de cadena.
+    return implode("",$resultado);
+}

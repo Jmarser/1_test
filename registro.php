@@ -44,11 +44,13 @@ if (isset($_SERVER['REQUEST_METHOD']) == 'POST') {
 
             $conn = conectar();//obtenemos la conexión a la base de datos.
 
+            echo "La clave ofuscada es:".ofuscarPassword($pass);
+
             //Array con los datos del usuario
             $usuario = array(
                 "nombre" => $nombre,
                 "email" => $email,
-                "pass" => password_hash($pass, PASSWORD_DEFAULT, ['cost' => 10]),
+                "pass" => password_hash(ofuscarPassword($pass), PASSWORD_DEFAULT, ['cost' => 10]),
                 "activo" => 1, //por defecto activo
                 "rol" => "user" //por defecto usuario
             );

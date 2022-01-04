@@ -31,7 +31,7 @@ if (isset($_SERVER['REQUEST_METHOD']) == 'POST') {
             $conn = conectar();//obtenemos conexión con la base de datos.
 
             //realizamos la consulta llamando a la función que hemos creado para ello.
-            $resultado = loginUsuario($conn, $email, $pass);
+            $resultado = loginUsuario($conn, $email, ofuscarPassword($pass));
 
             desconectar($conn);//cerramos la conexión con la base de datos.
 
